@@ -1,0 +1,11 @@
+.contain::-webkit-scrollbar{
+    display: none;
+}
+
+.navbar::-webkit-scrollbar{
+    display: none;
+}
+
+body{
+    background-color: #ffffff;
+}
