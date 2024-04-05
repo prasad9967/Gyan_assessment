@@ -5,9 +5,9 @@ import { IoLocationSharp } from "react-icons/io5";
 const Event = ({event}) => {
   return (
     <div className='basis-80 shrink-0 rounded bg-slate-50 border-[1px] border-bcolor relative' >
-      <img src='./src/assets/demo.jpeg' alt='image' className='z-10 h-[200px] w-[300px] object-cover  mx-auto mt-2 rounded' />
-      <div className='absolute bottom-[5.4rem] z-10 bg-black bg-opacity-10 text-subtitle w-[300px] ml-2 rounded-b'>
-        <p className='text-[0.75rem] ml-3'>{new Date(event.date).toDateString()}</p>
+      <img src={`https://drive.google.com/thumbnail?id=${event.imgUrl.slice(32,-5)}`} alt='image' className='z-10 h-[250px] w-[320px] object-cover  mx-auto mt-2 rounded img-crop' />
+      <div className='absolute lg:bottom-[6.4rem] bottom-[5.8rem] z-10 bg-black bg-opacity-80 text-gray-200 w-[286px] ml-4 rounded-b'>
+        <p className='text-[0.75rem] ml-3'>{new Date(event.date).toDateString().substring(3)}</p>
       </div>
       <h1 className='font-semibold text-heading mt-5 ml-3 text-[1rem]'>{event.eventName}</h1>
       <div className='flex justify-between mt-1 ml-3 mb-2 text-subtitle'>

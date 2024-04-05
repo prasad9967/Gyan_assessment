@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { FaArrowRightLong } from "react-icons/fa6";
 import Event from './Event';
 import _debounce from 'lodash/debounce'
+import Loader from './Loader';
 
 
 const Events = () => {
@@ -52,7 +53,7 @@ const Events = () => {
           ))
         )}
       </div>
-      {loading && <div className='text-center font-semibold my-2'>Loading more events... </div>}
+      {loading && <Loader />}
       
     </div>
   )

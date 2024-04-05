@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { FaArrowRightLong } from "react-icons/fa6";
 import Show from './Show';
-import { fetchShow } from '../hooks/useFetchData';
+import Loader from './Loader';
+
 
 const Shows = () => {
   const [shows, setShows] = useState([])
@@ -33,7 +34,7 @@ const Shows = () => {
             <a href='#' className='text-gray-50 z-10 text-lg underline ml-auto mr-5 font-semibold'>See all</a>
         </div>
         <div className='flex flex-auto gap-8 mt-2 overflow-x-auto  relative contain'>
-        {loading && <div className='text-3xl justify-self-center font-semibold z-10 ml-[30rem]'>Loading Shows.....</div>}
+        {loading && <Loader />}
           {!loading && shows.length&&(
             shows.map((show, idx) => (
               <Show key={idx} show = {show} />

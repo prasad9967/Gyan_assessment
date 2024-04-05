@@ -9,3 +9,7 @@
 body{
     background-color: #ffffff;
 }
+
+.img-crop{
+    clip-path: inset(16px)
+}
